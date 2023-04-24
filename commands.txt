@@ -8,3 +8,5 @@ git add .
 git commit -m""
 
 Oleh 17202630Aa
+
+git push -u origin main

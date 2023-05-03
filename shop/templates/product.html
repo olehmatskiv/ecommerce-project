@@ -1,0 +1,29 @@
+
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block title %} About {% endblock %}
+
+    {% block content %}
+<div class="container bg-dark-subtle border border-secondary">     
+    <div class="container py-5">
+        <div class="row mt-5">
+            <div class="col-9 mx-auto col-md-9 my-3">
+                <img class="product_img" src="{% static 'img/macbook.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="col-9 mx-auto col-md-9 my-3">
+        <div>
+            <h1 class="product_title">MacBook</h1>
+            <p class="product_price">$1000</p>
+            <p class="product_desc">Product Description</p>
+            <p class="text-justify product_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non animi ut maxime veritatis deserunt iure praesentium commodi nobis doloremque, perferendis nam odio eligendi, illum est dolore autem. Rem, minima cum.
+            </p>
+            <p class="text-justify product_text mb-5">
+                Out of Stock
+            </p>
+        </div>
+    </div>
+</div>
+    {% endblock %}

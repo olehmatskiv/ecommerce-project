@@ -1,19 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
-</head>
-<body>
 
-    {% extends 'header.html' %}
-    {% block content %}
+    {% extends 'base.html' %}
 
+    {% load static %}
 
-    <H1>Oleh Matskiv</H1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga, soluta eveniet harum ipsam iusto, nostrum assumenda enim expedita aliquam repudiandae pariatur est! Eaque dolor nesciunt aspernatur. Exercitationem, aut dolorum!</p>
+    {% block title %}
+    Home 
     {% endblock %}
-</body>
-</html>
+    {% block content %}
+    <div class="container bg-dark-subtle border border-secondary ">
+        <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 mx-auto text-center">
+                        <h1 class="text-capitalize font-weight-bold text-secondary">
+                            Our  Products
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row">
+                {% for i in 'aaaaaaaa' %}
+                    <div class="col-9 mx-auto col-md-6 col-lg-3">
+                        <div class="card mb-5">
+                            <div class="p-4">
+                                <img src="{% static 'img/macbook.jpg' %}" alt="" class="card-img-top">
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <p class="font-weight-bold mb-0">
+                                    MacBook
+                                </p>
+                                <h5 class="text-info font-italic mb-0" >
+                                    $1000
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

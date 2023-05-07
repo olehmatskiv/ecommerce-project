@@ -4,15 +4,17 @@
 }
 
 body{
-    background-image: url('/static/img/bgimage.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-image: url('/static/img/subtle-mosaic-pattern.png');
+    
+    
+    
+    
+    
 }
-@media screen and (max-width:1280px){
+
+@media all and (max-width:991px){
     body{
-        background-image: url('/static/img/bgimage.jpg');
-        background-size: 300%;
+        
     }
     }
 

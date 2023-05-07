@@ -7,7 +7,7 @@
     Home 
     {% endblock %}
     {% block content %}
-    <div class="container bg-dark-subtle border border-secondary ">
+    <div class=" container bg-dark-subtle border border-secondary ">
         <div class="py-5">
             <div class="container">
                 <div class="row">
@@ -22,18 +22,18 @@
 
         <div class="container ">
             <div class="row">
-                {% for i in 'aaaaaaaa' %}
+                {% for product in products %}
                     <div class="col-9 mx-auto col-md-6 col-lg-3">
                         <div class="card mb-5">
                             <div class="p-4">
-                                <img src="{% static 'img/macbook.jpg' %}" alt="" class="card-img-top">
+                                <img src="{{product.image.url}}" alt="{{product.name}}" class="card-img-top">
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <p class="font-weight-bold mb-0">
-                                    MacBook
+                                    {{product.name}}
                                 </p>
                                 <h5 class="text-info font-italic mb-0" >
-                                    $1000
+                                    {{product.price}}
                                 </h5>
                             </div>
                         </div>

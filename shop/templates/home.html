@@ -7,7 +7,7 @@
     Home 
     {% endblock %}
     {% block content %}
-    <div class=" container bg-dark-subtle border border-secondary ">
+    <div class="content container bg-dark-subtle border border-secondary ">
         <div class="py-5">
             <div class="container">
                 <div class="row">
@@ -26,7 +26,7 @@
                     <div class="col-9 mx-auto col-md-6 col-lg-3">
                         <div class="card mb-5">
                             <div class="p-4">
-                                <img src="{{product.image.url}}" alt="{{product.name}}" class="card-img-top">
+                                <a href="{{product.get_url}}"><img src="{{product.image.url}}" alt="{{product.name}}" class="card-img-top"></a>
                             </div>
                             <div class="card-footer d-flex justify-content-between">
                                 <p class="font-weight-bold mb-0">

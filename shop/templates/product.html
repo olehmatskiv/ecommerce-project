@@ -8,21 +8,25 @@
     <div class="container py-5">
         <div class="row mt-5">
             <div class="col-9 mx-auto col-md-9 my-3">
-                <img class="product_img" src="{% static 'img/macbook.jpg' %}" alt="">
+                <img class="product_img" src="{{product.image.url}}" alt="">
             </div>
         </div>
     </div>
     <div class="col-9 mx-auto col-md-9 my-3">
         <div>
-            <h1 class="product_title">MacBook</h1>
-            <p class="product_price">$1000</p>
+            <h1 class="product_title">{{product.name}}</h1>
+            <p class="product_price">{{product.price}} $</p>
             <p class="product_desc">Product Description</p>
             <p class="text-justify product_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non animi ut maxime veritatis deserunt iure praesentium commodi nobis doloremque, perferendis nam odio eligendi, illum est dolore autem. Rem, minima cum.
+                {{product.description}}
             </p>
+            {% if product.stock <= 0 %}
             <p class="text-justify product_text mb-5">
                 Out of Stock
             </p>
+            {% else %}
+            <a href="">Add To Cart</a>
+            {% endif %}
         </div>
     </div>
 </div>

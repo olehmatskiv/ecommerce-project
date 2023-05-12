@@ -1,0 +1,16 @@
+.cart-thead{
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.cart-table{
+    font-size: 14px;
+}
+
+.cart-icon{
+    color:red ;
+}
+
+.link{
+    text-decoration: none;
+}

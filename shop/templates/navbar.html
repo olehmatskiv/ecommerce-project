@@ -7,8 +7,8 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <ul class="navbar-nav  gap-4">
+        <div class="collapse navbar-collapse justify-content-between " id="navbarNav">
+            <ul class="navbar-nav  gap-4 ">
                 <li class="nav-item dropdown">
                     <a  class="nav-link active text-secondary dropdown-toggle" aria-current="page" data-bs-toggle="dropdown" href="#">Categories</a>
                     <ul class="dropdown-menu">
@@ -19,11 +19,54 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-secondary" href="#">Contacts</a>
+                    <a class="nav-link text-secondary " href="#">Contacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">About</a>
+                    <a class="nav-link text-secondary " href="#">About</a>
                 </li>
+                {% if request.user.is_authenticated and request.user.first_name %}
+                <li class="nav-item">
+                    <span class="nav-link text-secondary " >
+                        Welcome, {{ request.user.first_name}}!<span class="material-symbols-outlined">
+                            location_home
+                            </span>
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'signout' %}" class="nav-link text-secondary " >
+                        Sign Out<span class="material-symbols-outlined">
+                            logout
+                            </span>
+                    </a>
+                </li>
+
+                {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'signup' %}" class="nav-link text-secondary " >
+                        Sign Up<span class="material-symbols-rounded">
+                            person_add
+                            </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'login' %}" class="nav-link text-secondary " >
+                        Log In<span class="material-symbols-rounded">
+                            login
+                            </span>
+                    </a>
+                </li>
+
+                {% endif %}
+
+                {% if item_count > 0%}
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="{% url 'cart_detail' %}">
+                        <span class="material-symbols-rounded">
+                        add_shopping_cart({{item_count}})
+                        </span>
+                    </a>
+                </li>
+                {% endif%}
             </ul>
             <form class="form-inline">
                 <div class="input-group">

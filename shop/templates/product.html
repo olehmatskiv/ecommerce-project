@@ -1,7 +1,7 @@
 
     {% extends 'base.html' %}
     {% load static %}
-    {% block title %} About {% endblock %}
+    {% block title %} About Product {% endblock %}
 
     {% block content %}
 <div class="container bg-dark-subtle border border-secondary">     
@@ -25,7 +25,7 @@
                 Out of Stock
             </p>
             {% else %}
-            <a href="">Add To Cart</a>
+            <a href="{% url 'add_cart' product.id %}">Add To Cart</a>
             {% endif %}
         </div>
     </div>

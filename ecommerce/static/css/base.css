@@ -3,41 +3,38 @@
     padding: 0;
 }
 
+
 body{
-    background-image: url('/static/img/subtle-mosaic-pattern.png');
-    
-    
-    
-    
-    
+    background-image: url('/static/img/subtle-mosaic-pattern.png');    
 }
 
-@media all and (max-width:991px){
-    body{
-        
-    }
-    }
 
 
 .material-symbols-outlined{
     font-size: 40px;
     padding: 10px;
 }
-.material-symbols-outlined .md-24{
+.material-symbols-rounded{
+   
+}
+.material-symbols-outlined.md-24{
     font-size: 24px;
+}
+.nav-item{
+    
 }
 
 .nav-item:hover{
-    background-color: black;
-    border-radius: 20px;
-    transition-duration: 1.5s;
+    
 }
 
-
+.navbar-nav{
+    
+}
 
 @media all and (max-width:991px){
     .nav-item:hover{
-    background-color: transparent;
+    
 }
 }
 .form-inline{
@@ -64,6 +61,18 @@ body{
     font-size: 24px;
     color: green;
 }
+
+/* Style for signup */
+
+.errorlist li{
+    color: red;
+    font-weight: bold;
+}
+
+.custom_div{
+    margin-bottom: 20px !important;
+}
+
 
 
 
